@@ -1043,12 +1043,21 @@ h1 {
 
 /* グループ見出し */
 .docs-nav-heading {
-    padding: 8px 12px;
-    margin-bottom: 5px;
-    color: #9ca3af;
+    display: flex;
+    align-items: center;
+    padding: 8px 10px;
+    margin: 18px 0 8px;
+    color: #f3f4f6;
     font-size: 12px;
     font-weight: 700;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
+    border-left: 3px solid #00a0f0;
+    background: #292c35;
+    border-radius: 0 4px 4px 0;
+    cursor: default;
+    user-select: none;
+    pointer-events: none;
 }
 
 /* メニュー項目 */
