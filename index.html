@@ -11,20 +11,23 @@
 </head>
 <body>
     <a class="skip-link" href="#main">本文へ移動</a>
-    <div id="header"></div>
-    <script>
-        fetch("/header.html")
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error("ヘッダーの読み込みに失敗しました");
-                }
-                return response.text();
-            })
-            .then(html => {
-                document.getElementById("header").innerHTML = html;
-            })
-            .catch(error => console.error(error));
-    </script>
+    <header class="site-header">
+        <div class="container nav-wrap">
+            <a class="brand" href="index.html" aria-label="Rydia Engine ホーム">
+                <span class="brand-mark" aria-hidden="true">R</span>
+                <span class="brand-name">RydiaEngine</span>
+            </a>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+                <span></span><span></span><span></span><span class="sr-only">メニュー</span>
+            </button>
+            <nav class="site-nav" id="site-nav" aria-label="メインナビゲーション">
+                <a href="index.html#features">機能</a>
+                <a href="docs/index.html">ドキュメント</a>
+                <a href="news/index.html">更新履歴</a>
+                <a class="nav-cta" href="index.html#download">ダウンロード</a>
+            </nav>
+        </div>
+    </header>
     <main id="main">
         <section class="hero">
             <div class="hero-glow hero-glow-one"></div>
